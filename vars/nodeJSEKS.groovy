@@ -76,7 +76,7 @@ def call(Map configMap){
                     }
                 }
             }
-            stage('docker build') {
+            stage('docker push') {
                 steps {
                     script {
                         sh """
