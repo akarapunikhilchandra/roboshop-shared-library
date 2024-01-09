@@ -52,7 +52,7 @@ def call(Map configMap){
                     nexusArtifactUploader(
                         nexusVersion: 'nexus3',
                         protocol: 'http',
-                        nexusUrl: '54.152.209.223:8081/',
+                        nexusUrl: '34.204.75.78:8081/',
                         groupId: 'com.roboshop',
                         version: "$packageVersion",
                         repository: "${component}",
