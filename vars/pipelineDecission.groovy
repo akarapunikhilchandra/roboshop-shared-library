@@ -15,7 +15,6 @@ def decidePipeline(Map configMap){
         case 'JavaVM':
             javaVMCI(configMap)
             break
-
         case 'javaEKS':
             javaEKS(configMap)
             break

@@ -2,6 +2,7 @@ def call(Map configMap){
     // mapName.get("key-name")
     def component = configMap.get("component")
     echo "component is : $component"
+    def pomMap = [:] 
     pipeline {
         agent { node { label 'AGENT-1' } }
         environment{
@@ -67,8 +68,8 @@ def call(Map configMap){
                         artifacts: [
                             [artifactId: "${component}",
                             classifier: '',
-                            file: "${component}.zip",
-                            type: 'zip']
+                            file: "./target/${component}-${pomMap.version}.jar",
+                            type: 'jar']
                         ]
                     )
                 }
